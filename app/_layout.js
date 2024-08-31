@@ -1,10 +1,16 @@
 import { Stack } from "expo-router";
-import { View } from "react-native";
+import { Text, View } from "react-native";
+import { HomeIcon } from "../components/Icons";
 
 export default function Layout() {
 	return (
-		<Stack>
-			<Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+		<Stack
+			screenOptions={{
+				headerTitle: "",
+				headerLeft: () => <Text>Aquí irá el logo</Text>,
+			}}
+		>
+			<Stack.Screen name="(tabs)" />
 		</Stack>
 	);
 }
